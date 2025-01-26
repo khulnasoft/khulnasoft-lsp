@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "composite": true,
+    "esModuleInterop": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./src/common/tsconfig.json" },
+    { "path": "./src/browser/tsconfig.json" },
+    { "path": "./src/node/tsconfig.json" },
+    { "path": "./packages/lib_disposable/tsconfig.json" },
+    { "path": "./packages/lib_di/tsconfig.json" },
+    { "path": "./packages/lib_logging/tsconfig.json" },
+    { "path": "./packages/lib_message_bus/tsconfig.json" },
+    { "path": "./packages/lib_handler_registry/tsconfig.json" },
+    { "path": "./packages/lib_webview/tsconfig.json" },
+    { "path": "./packages/lib_webview_client/tsconfig.json" },
+    { "path": "./packages/lib_webview_plugin/tsconfig.json" },
+    { "path": "./packages/lib_webview_theme/tsconfig.json" },
+    { "path": "./packages/lib_webview_transport/tsconfig.json" },
+    { "path": "./packages/lib_webview_transport_json_rpc/tsconfig.json" },
+    { "path": "./packages/lib_webview_transport_socket_io/tsconfig.json" },
+    { "path": "./packages/webview_duo_chat/tsconfig.json" },
+    { "path": "./packages/webview_duo_workflow/tsconfig.json" },
+    { "path": "./packages/lib-pkg-1/tsconfig.json" },
+    { "path": "./packages/lib-pkg-2/tsconfig.json" }
+  ]
+}

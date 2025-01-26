@@ -1,0 +1,10 @@
+{
+  "name": "@khulnasoft/rpc-message-schema-generation",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@khulnasoft/rpc-message": "0.0.0",
+    "zod-to-json-schema": "^3.23.5"
+  }
+}

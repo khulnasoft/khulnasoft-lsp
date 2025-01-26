@@ -1,0 +1,11 @@
+{
+  "name": "@khulnasoft/logging",
+  "version": "0.0.0",
+  "private": "true",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft/di": "0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {}
+}

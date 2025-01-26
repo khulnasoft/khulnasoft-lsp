@@ -1,0 +1,14 @@
+{
+  "name": "@khulnasoft/webview",
+  "description": "",
+  "version": "0.0.0",
+  "private": "true",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft/webview-plugin": "0.0.0",
+    "@khulnasoft/webview-transport": "0.0.0",
+    "@khulnasoft/handler-registry": "0.0.0",
+    "@khulnasoft/logging": "0.0.0"
+  },
+  "scripts": {}
+}

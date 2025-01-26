@@ -1,0 +1,11 @@
+{
+  "name": "@khulnasoft/endpoint-lsp-adapter",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@khulnasoft/di": "0.0.0",
+    "@khulnasoft/rpc-message": "0.0.0",
+    "@khulnasoft/endpoint": "0.0.0"
+  }
+}

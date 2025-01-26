@@ -1,0 +1,22 @@
+{
+  "name": "@webview/security-vuln-details",
+  "version": "0.0.0",
+  "main": "./metadata.ts",
+  "type": "module",
+  "dependencies": {
+    "@khulnasoft/webview-client": "0.0.0",
+    "@khulnasoft/webview-plugin": "0.0.0",
+    "@khulnasoft/ui": "^90",
+    "@ts-stack/markdown": "^1.5.0"
+  },
+  "devDependencies": {
+    "@khulnasoft/vite-common-config": "0.0.0",
+    "sass": "^1.77.8",
+    "vite": "^5.3.5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite --config vite.config.ts build",
+    "build:watch": "vite --config vite.config.ts build --watch"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@khulnasoft/webview-transport-json-rpc",
+  "version": "0.0.0",
+  "private": "true",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft/webview-transport": "0.0.0",
+    "@khulnasoft/logging": "0.0.0",
+    "events": "^3.3.0"
+  },
+  "devDependencies": {
+    "vscode-languageserver-types": "3.17.5",
+    "typed-emitter": "2.1.0"
+  },
+  "scripts": {}
+}

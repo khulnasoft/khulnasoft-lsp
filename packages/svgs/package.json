@@ -1,0 +1,56 @@
+{
+  "name": "@khulnasoft/svgs",
+  "version": "3.112.0",
+  "description": "SVG Assets for KhulnaSoft",
+  "main": "./index.js",
+  "repository": "git@github.com:khulnasoft/gitlab-svgs.git",
+  "author": "KhulnaSoft",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "svg": "build_scripts/build-svgs.sh",
+    "dev": "yarn run svg && nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
+    "@khulnasoft/eslint-plugin": "workspace:*",
+    "bootstrap": "^4.3.1",
+    "eslint": "8.57.0",
+    "glob": "^7.1.3",
+    "mkdirp": "^0.5.1",
+    "nuxt": "^2.2.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "rimraf": "^2.6.2",
+    "svg-sprite": "^1.5.0",
+    "svg4everybody": "^2.1.9",
+    "svgo": "^1.3.0"
+  },
+  "resolutions": {
+    "chokidar": "^3.4.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/exec",
+        {
+          "analyzeCommitsCmd": "./build_scripts/analyze-commits.sh ${lastRelease.gitTag}",
+          "generateNotesCmd": "./build_scripts/generate-notes.sh ${lastRelease.gitTag} ${nextRelease.version}"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/gitlab"
+    ],
+    "success": false,
+    "fail": false
+  }
+}

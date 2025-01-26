@@ -1,0 +1,16 @@
+{
+  "name": "@khulnasoft/vite-common-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.mjs",
+  "module": "true",
+  "dependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.8",
+    "@khulnasoft/ui": "^87.2.1",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "node-html-parser": "^6.1.12",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

@@ -1,0 +1,7 @@
+pre-commit:
+  piped: true
+  commands:
+    update:
+      run: yarn run update
+    prettier:
+      run: yarn run pretty-quick --staged

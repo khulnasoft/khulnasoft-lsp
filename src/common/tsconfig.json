@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.shared.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "rootDir": ".",
+    "outDir": "../../out/common",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": [".", "./**/*.json"]
+}

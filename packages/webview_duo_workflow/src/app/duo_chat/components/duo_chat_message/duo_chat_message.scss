@@ -1,0 +1,65 @@
+.duo-chat-message {
+  max-width: 90%;
+  position: relative;
+
+  code {
+    @apply gl-bg-gray-100;
+  }
+
+  pre {
+    @apply gl-text-inherit;
+    padding: $gl-spacing-scale-3 $gl-spacing-scale-4;
+  }
+
+  pre code {
+    @apply gl-text-sm;
+    @apply gl-leading-1;
+    @apply gl-bg-transparent;
+    white-space: inherit;
+  }
+
+  p:last-of-type {
+    @apply gl-mb-0;
+  }
+
+  copy-code,
+  insert-code-snippet {
+    position: absolute;
+    @apply gl-transition-all;
+    @apply gl-opacity-0;
+    right: $gl-spacing-scale-3;
+    top: $gl-spacing-scale-3;
+  }
+
+  copy-code {
+    margin-right: $gl-spacing-scale-8;
+  }
+
+  .js-markdown-code.markdown-code-block:hover {
+    copy-code,
+    copy-code:focus-within,
+    insert-code-snippet,
+    insert-code-snippet:focus-within {
+      @apply gl-opacity-10;
+    }
+  }
+
+  .has-error {
+    margin-left: $gl-spacing-scale-6;
+  }
+
+  .error-icon {
+    top: 14px;
+    position: absolute;
+  }
+}
+
+.insert-code-hidden {
+  insert-code-snippet {
+    display: none;
+  }
+
+  copy-code {
+    margin-right: 0;
+  }
+}

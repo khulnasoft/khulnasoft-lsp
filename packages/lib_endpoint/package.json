@@ -1,0 +1,14 @@
+{
+  "name": "@khulnasoft/endpoint",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@khulnasoft/rpc-message": "0.0.0",
+    "@khulnasoft/di": "0.0.0",
+    "zod": "^3.23.8"
+  },
+  "scripts": {
+    "run": "ts-node src/main.ts"
+  }
+}

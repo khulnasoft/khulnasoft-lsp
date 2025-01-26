@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.shared.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "outDir": "../../out/node",
+    "rootDir": "..",
+    "types": ["node", "jest"],
+    "esModuleInterop": true, // for re2
+    "strict": true
+  },
+  "include": [".", "../common", "../node"],
+  "exclude": ["./fixtures"],
+  "references": [{ "path": "../common/tsconfig.json" }]
+}

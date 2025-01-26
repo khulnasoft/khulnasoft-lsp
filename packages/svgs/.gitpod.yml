@@ -1,0 +1,3 @@
+tasks:
+  - init: yarn install && yarn run svg && yarn run dev
+    command: yarn run dev

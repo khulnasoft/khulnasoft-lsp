@@ -1,0 +1,168 @@
+$duo-chat-scrim-gradient: linear-gradient(to bottom, rgba($gray-10, 0), $gray-10);
+
+.duo-chat {
+  z-index: 999;
+
+  .message-enter-active,
+  .message-leave-active {
+    transition: all 0.5s ease;
+  }
+
+  .message-enter,
+  .message-leave-to {
+    @apply gl-opacity-0;
+    transform: translateY(10px);
+  }
+
+  .duo-chat-loader.message-leave,
+  .duo-chat-loader.message-leave-to {
+    transition: none;
+  }
+
+  .duo-chat-drawer-body-scrim-on-footer {
+    &::before {
+      background: $duo-chat-scrim-gradient;
+    }
+  }
+
+  .duo-chat-drawer-body {
+    overflow-y: auto;
+  }
+
+  .duo-chat-drawer-header,
+  .duo-chat-drawer-body > * {
+    @apply gl-p-5;
+  }
+}
+
+.duo-chat-drawer {
+  right: 0;
+  @apply gl-transition-all;
+  position: fixed;
+  @apply gl-h-full;
+  @apply gl-w-full;
+  @apply gl-overflow-y-auto;
+  @apply gl-shadow-lg;
+  @apply gl-text-base;
+  @apply gl-leading-normal;
+  @apply gl-flex;
+  @apply gl-flex-col;
+}
+
+.duo-chat-drawer-header {
+  @apply gl-border-b-solid gl-border-b-gray-100 gl-border-b-1;
+}
+
+.duo-chat-drawer-header-sticky {
+  top: 0;
+  position: sticky;
+  @apply gl-border-b-solid gl-border-b-gray-100 gl-border-b-1;
+}
+
+.duo-chat-drawer-body {
+  @apply gl-grow;
+  // prevent safari bug where box shadow is visible
+  // above the drawer when hovering interactive elements
+  // see https://gitlab.com/gitlab-org/gitlab/-/issues/366558
+  background-color: inherit;
+}
+
+.duo-chat-drawer-footer {
+  @apply gl-border-t-solid gl-border-t-gray-100 gl-border-t-1;
+  @apply gl-p-5;
+}
+
+.duo-chat-drawer-footer-sticky {
+  @apply gl-bg-white;
+  bottom: 0;
+  position: sticky;
+}
+
+.duo-chat-drawer-body-scrim-on-footer {
+  &::before {
+    background: $duo-chat-scrim-gradient;
+    top: -$gl-border-size-1;
+    @apply -gl-translate-y-full;
+    content: '';
+    left: 0;
+    position: absolute;
+    @apply gl-pointer-events-none;
+    @apply gl-w-full;
+    @apply gl-h-7;
+  }
+}
+
+.duo-chat-history {
+  scroll-behavior: smooth;
+
+  &.force-scroll-bar {
+    min-height: calc(100% + 1rem);
+  }
+
+  /*
+  Browsers a are pretty good at keeping the focus on an element while
+  the parent element grows in size. With this we mark all child elements
+  of the chat history as "non" anchors.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-anchor
+  */
+  * {
+    overflow-anchor: none;
+  }
+
+  /*
+  Right at the bottom of the chat history we add a scroll-anchor element.
+  This scroll-anchor element is the only "possible" anchor. The beauty of it:
+  It only will be used as an anchor _if_ it is currently inside the view port.
+  So if the user manually scrolls up while a chunked message is coming in,
+  it won't stick to the bottom while the message still loads.
+  */
+  .scroll-anchor {
+    overflow-anchor: auto;
+    height: 1px;
+    margin-top: -1px; // In order to not add 1px vertically, we add a negative margin
+  }
+}
+
+.duo-chat-input {
+  @apply gl-flex;
+  @apply gl-flex-col;
+  max-height: 240px;
+  overflow: hidden;
+
+  &:focus-within {
+    @include gl-focus($color: $gray-900);
+  }
+
+  .gl-form-textarea.form-control {
+    flex: 1;
+    resize: none;
+    max-height: 240px;
+    padding-right: 40px;
+  }
+
+  &::after {
+    content: attr(data-value) ' ';
+    @apply gl-invisible;
+    @apply gl-whitespace-pre-wrap;
+    @apply gl-py-4;
+  }
+}
+
+.slash-commands {
+  @apply -gl-mt-2;
+
+  .active-command {
+    @apply gl-bg-gray-50;
+    @apply gl-rounded-base;
+  }
+
+  .gl-dropdown-item button.dropdown-item {
+    @apply gl-text-sm;
+    @apply gl-px-3;
+    @apply gl-bg-transparent;
+
+    &:hover {
+      @apply gl-bg-transparent;
+    }
+  }
+}

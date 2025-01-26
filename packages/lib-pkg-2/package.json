@@ -1,0 +1,15 @@
+{
+  "name": "@khulnasoft-lsp/pkg-2",
+  "version": "0.0.0",
+  "private": "true",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft-lsp/pkg-1": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.36"
+  },
+  "scripts": {
+    "clean": "tsc -b --clean && rimraf ./dist"
+  }
+}

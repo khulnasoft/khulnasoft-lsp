@@ -1,0 +1,7 @@
+node_modules/**
+out/**
+*.json
+*.md
+src/tests/fixtures/**/*
+# vendorered from https://gitlab.org/gitlab/gitlab-ui, beff91ae7
+packages/webview_duo_workflow/src/app/duo_chat/**

@@ -1,0 +1,204 @@
+@import '@khulnasoft/ui/src/scss/gitlab_ui';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* These are gitlab-ui overrides.  */
+  --gl-text-color-default: var(--editor-foreground);
+  --gl-text-color-strong: var(--editor-foreground);
+  --gl-text-color-heading: var(--editor-foreground);
+  --gl-text-color-link: var(--editor-textLink-foreground);
+  --gl-text-color-secondary: var(--editor-foreground--muted);
+  --gl-control-background-color-default: var(--editor-badge-background);
+
+  --gl-control-background-color-disabled: var(--editor-input-background-focus);
+  --gl-color-text-disabled: var(--editor-foreground-disabled);
+
+  --gl-button-default-primary-foreground-color-default: var(--editor-button-foreground);
+  --gl-button-default-primary-background-color-default: var(--editor-button-background);
+  --gl-button-default-primary-border-color-default: var(--editor-button-border);
+  --gl-button-default-primary-foreground-color-hover: var(--editor-button-foreground);
+  --gl-button-default-primary-background-color-hover: var(--editor-button-background-hover);
+  --gl-button-default-primary-border-color-hover: var(--editor-button-border);
+  --gl-button-default-primary-foreground-color-focus: var(--editor-button-foreground);
+  --gl-button-default-primary-background-color-focus: var(--editor-button-background);
+  --gl-button-default-primary-border-color-focus: var(--editor-button-border);
+  --gl-button-default-primary-foreground-color-active: var(--editor-button-foreground);
+  --gl-button-default-primary-background-color-active: var(--editor-button-background-hover);
+  --gl-button-default-primary-border-color-active: var(--editor-button-border);
+
+  --gl-button-confirm-primary-border-color-focus: var(--editor-button-border); /* Used for the border of a confirm (positive) primary button in the focus state. */
+  --gl-button-confirm-primary-background-color-active: var(--editor-button-background-hover); /* Used for the background of a confirm (positive) primary button in the active state. */
+  --gl-button-confirm-primary-background-color-hover: var(--editor-button-background-hover); /* Used for the background of a confirm (positive) primary button in the hover state. */
+  --gl-button-confirm-primary-background-color-default: var(--editor-button-background); /* Used for the background of a confirm (positive) primary button in the default state. */
+  --gl-button-confirm-primary-foreground-color-default: var(--editor-button-foreground);
+  --gl-button-confirm-primary-border-color-default: var(--editor-button-border);
+
+  --gl-button-confirm-secondary-background-color-default: var(--editor-buttonSecondary-background); /* Used for the background of an outlined confirm (positive) button in the default state. */
+  --gl-button-confirm-secondary-foreground-color-default: var(--editor-buttonSecondary-foreground); /* Used for the foreground of a confirm (positive) button in the default state. */
+  --gl-button-confirm-secondary-background-color-hover: var(--editor-buttonSecondary-background-hover);
+
+  --gl-button-default-tertiary-foreground-color-default: var(--editor-foreground);
+  --gl-button-default-tertiary-foreground-color-hover: var(--editor-foreground);
+
+  --gl-background-color-default: var(--editor-background);
+  --gl-button-dashed-border-color-default: var(--editor-foreground);
+
+  --gl-alert-info-background-color: var(--editor-alert-background); /* Used for the background color of an info alert. */
+  --gl-alert-info-title-color: var(--editor-alert-foreground); /* Used for the title color of an info alert. */
+
+  --gl-text-color-heading: var(--editor-heading-foreground);
+
+  --gl-border-color-default: var(--editor-foreground--muted);
+
+  --gl-background-color-overlap: var(--editor-alert-background);
+}
+
+body {
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
+  background-color: var(--editor-background);
+  color: var(--editor-foreground);
+}
+a,
+a:hover,
+.gl-link  {
+  color: var(--editor-textLink-foreground);
+}
+a:active {
+  color: var(--editor-textLink-foreground-active);
+}
+
+p {
+  color: var(--editor-foreground)
+}
+
+li {
+  color: var(--editor-foreground)
+}
+
+label {
+  color: var(--editor-foreground)
+}
+
+.gl-markdown{
+  color: var(--editor-foreground)
+}
+
+.selected-item {
+  background-color: var(--editor-button-background);
+  color: var(--editor-button-foreground);
+}
+
+.gl-button-icon {
+  fill: var(--editor-foreground);
+}
+
+.gl-button.gl-button {
+  &.btn-confirm,
+  &.btn-info {
+    @include gl-button-theme(
+      $color: var(--gl-button-confirm-primary-foreground-color-default),
+      $background-color: var(--gl-button-confirm-primary-background-color-default),
+      $border-color: var(--gl-button-confirm-primary-border-color-default),
+      $hover-color: var(--gl-button-confirm-primary-foreground-color-hover),
+      $hover-background-color: var(--gl-button-confirm-primary-background-color-hover),
+      $hover-border-color: var(--gl-button-confirm-primary-border-color-hover),
+      $focus-color: var(--gl-button-confirm-primary-foreground-color-focus),
+      $focus-background-color: var(--gl-button-confirm-primary-background-color-focus),
+      $focus-border-color: var(--gl-button-confirm-primary-border-color-focus),
+      $active-color: var(--gl-button-confirm-primary-foreground-color-active),
+      $active-background-color: var(--gl-button-confirm-primary-background-color-active),
+      $active-border-color: var(--gl-button-confirm-primary-border-color-active),
+    );
+  }
+  &.disabled{
+    opacity: 0.6;
+  }
+}
+
+.btn-dashed > .gl-button-text{
+  color: var(--editor-foreground)
+}
+
+.gl-modal {
+  color: var(--editor-foreground);
+  .modal-content {
+    background-color: var(--editor-background);
+    border-color: var(--editor-border);
+    border-radius: 2px;
+  }
+  .modal-header {
+    background-color: var(--editor-background);
+    & > :first-child {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+  }
+  .modal-body {
+    background-color: var(--editor-background);
+  }
+}
+
+.gl-animate-skeleton-loader {
+  background-color: var(--editor-foreground-muted);
+
+  background-image: linear-gradient(to right,
+  var(--editor-foreground-muted) 0,
+    var(--editor-foreground) 23%,
+    var(--editor-foreground) 27%,
+    var(--editor-foreground-muted) 50%
+  );
+}
+
+pre, code, kbd, samp {
+  font-family: var(--editor-code-font-family);
+  font-size: var(--editor-code-font-size);
+  font-weight: var(--editor-code-font-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--editor-heading-foreground);
+  font-weight: 600;
+}
+
+.gl-alert-danger > .gl-alert-content > .gl-alert-body{
+  color: #3a383f
+}
+
+.gl-alert-tip {
+  background-color: var(--editor-alert-background);
+}
+
+// Duo Chat minimal overrides
+
+.duo-chat-history{
+  background-color: var(--editor-background);
+}
+
+.duo-chat-message{
+  background-color: var(--editor-background);
+  color: var(--editor-foreground);
+
+  .duo-system-message {
+    color: var(--gl-text-secondary);
+
+    code {
+      font-size: inherit;
+    }
+
+    p {
+      color: inherit;
+    }
+  }
+}
+
+.duo-chat-drawer-footer{
+  background-color: var(--editor-background);
+}
+
+.duo-chat-input{
+  background-color: var(--editor-input-background);
+}

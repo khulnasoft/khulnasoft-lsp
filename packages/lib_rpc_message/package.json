@@ -1,0 +1,9 @@
+{
+  "name": "@khulnasoft/rpc-message",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "description": "Types and utilities for defining and managing RPC messages.",
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

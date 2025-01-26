@@ -1,0 +1,16 @@
+{
+  "name": "@khulnasoft/webview-client",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "uuid": "^10.0.0",
+    "socket.io-client": "^4.7.5",
+    "@khulnasoft/logging": "0.0.0",
+    "@khulnasoft/message-bus": "0.0.0",
+    "@khulnasoft/webview-theme": "0.0.0"
+  },
+  "scripts": {
+    "build": "tsc -b"
+  }
+}

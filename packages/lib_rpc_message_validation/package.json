@@ -1,0 +1,9 @@
+{
+  "name": "@khulnasoft/rpc-message-validation",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@khulnasoft/rpc-message": "0.0.0"
+  }
+}

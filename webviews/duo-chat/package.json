@@ -1,0 +1,28 @@
+{
+  "name": "@webview/duo-chat",
+  "version": "0.0.0",
+  "main": "./metadata.ts",
+  "type": "module",
+  "dependencies": {
+    "@khulnasoft/webview-plugin": "0.0.0",
+    "@khulnasoft/webview-client": "0.0.0",
+    "@khulnasoft/ui": "^87.2.1",
+    "@ts-stack/markdown": "^1.5.0",
+    "dompurify": "^3.1.7",
+    "highlight.js": "^11.10.0"
+  },
+  "devDependencies": {
+    "@khulnasoft/vite-common-config": "0.0.0",
+    "@types/dompurify": "^3.0.5",
+    "sass": "^1.77.8",
+    "vite": "^5.3.5",
+    "vue": "^2.7.16",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.7.16"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite --config vite.config.ts build",
+    "build:watch": "vite --config vite.config.ts build --watch"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@khulnasoft/rpc-messages",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@khulnasoft/rpc-message": "0.0.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.23.8"
+  }
+}

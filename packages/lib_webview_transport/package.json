@@ -1,0 +1,12 @@
+{
+  "name": "@khulnasoft/webview-transport",
+  "version": "0.0.0",
+  "private": "true",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft/webview-plugin": "0.0.0",
+    "@khulnasoft/disposable": "0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {}
+}

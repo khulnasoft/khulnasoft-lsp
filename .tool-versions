@@ -1,0 +1,6 @@
+nodejs 18.19.0
+python 3.10.0
+
+# For linting documentation
+markdownlint-cli2 0.17.1
+vale 3.9.3

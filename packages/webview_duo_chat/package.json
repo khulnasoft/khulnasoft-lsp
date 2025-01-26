@@ -1,0 +1,13 @@
+{
+  "name": "@khulnasoft/webview-duo-chat",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/plugin/index.ts",
+  "dependencies": {
+    "@anycable/core": "^0.9.1",
+    "@khulnasoft/disposable": "0.0.0",
+    "@khulnasoft/logging": "0.0.0",
+    "@khulnasoft/webview-plugin": "0.0.0"
+  },
+  "devDependencies": {}
+}

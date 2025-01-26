@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.shared.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": ".",
+    "outDir": "../../out/node",
+    "types": ["node", "jest"],
+    "esModuleInterop": true // for re2
+  },
+  "include": [".", "../common/duo_workflow"],
+  "references": [{ "path": "../common/tsconfig.json" }]
+}

@@ -1,0 +1,39 @@
+{
+  "parserOptions": {
+    "project": ["./tsconfig.*.json"]
+  },
+  "extends": ["plugin:@khulnasoft/typescript"],
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/test_examples/**/*"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "func-names": "off",
+        "no-empty-function": "off",
+        "no-restricted-syntax": [
+          "error",
+          {
+            "selector": "CallExpression[callee.name=/(before|after)(Each|All)/] CallExpression[callee.property.name=/clearAllMocks|mockClear/]",
+            "message": "It's usually not necessary to clear mocks between tests, as Jest is configured to do so automatically."
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.ts"],
+      "rules": {
+        "import/no-default-export": "warn",
+        "import/no-extraneous-dependencies": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "no-public"
+          }
+        ],
+        // FIXME: ESM package using `exports` in their package.json are not correctly resolved
+        // See: https://github.com/import-js/eslint-plugin-import/issues/1810
+        "import/no-unresolved": ["error", { "ignore": ["p-queue"] }]
+      }
+    }
+  ]
+}

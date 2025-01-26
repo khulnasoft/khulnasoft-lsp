@@ -1,0 +1,10 @@
+{
+  "name": "@khulnasoft/core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@khulnasoft/di": "0.0.0",
+    "@khulnasoft/disposable": "0.0.0"
+  }
+}
