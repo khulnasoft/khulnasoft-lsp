@@ -15,7 +15,7 @@
     "@khulnasoft/vite-common-config": "0.0.0",
     "@types/dompurify": "^3.0.5",
     "sass": "^1.77.8",
-    "vite": "^5.3.5",
+    "vite": "^7.1.11",
     "vue": "^2.7.16",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.7.16"
